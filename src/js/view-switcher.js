@@ -6,7 +6,7 @@
 
   // Map sub-items to parent. "writing", "wechat", "xiaohongshu" → "projects"
   function resolveParent(navId) {
-    if (navId === "writing" || navId === "wechat" || navId === "xiaohongshu") {
+    if (navId === "writing" || navId === "wechat" || navId === "xiaohongshu" || navId === "ai-coding") {
       return "projects";
     }
     return navId;
@@ -42,7 +42,7 @@
     var parentBtn = document.querySelector('.nav-parent[data-nav="projects"]');
     if (parentBtn) {
       var expanded = false;
-      if (navId === "writing" || navId === "wechat" || navId === "xiaohongshu") {
+      if (navId === "writing" || navId === "wechat" || navId === "xiaohongshu" || navId === "ai-coding") {
         expanded = true;
       }
       parentBtn.setAttribute("aria-expanded", expanded ? "true" : "false");

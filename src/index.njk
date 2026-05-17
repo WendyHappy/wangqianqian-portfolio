@@ -94,90 +94,24 @@ layout: base.njk
 {# === 公众号 === #}
 <section class="content-panel" id="panel-wechat" data-panel="wechat">
   <h2 class="panel-title">公众号</h2>
-
-  <div class="card-grid">
-    {% for svc in services %}{% if svc.id == "wechat-mp" %}
-    <div class="card service-card">
-      <h3>{{ svc.title }}</h3>
-      <p class="card-summary">{{ svc.summary }}</p>
-      <ul class="highlight-list">
-        {% for item in svc.highlights %}<li>{{ item }}</li>{% endfor %}
-      </ul>
-    </div>
-    {% endif %}{% endfor %}
-  </div>
-
-  <h3 class="sub-title">相关项目</h3>
-  <div class="card-grid">
-    {% for proj in projects %}{% if proj.category == "公众号" %}
-    <div class="card project-card{% if proj.featured %} featured{% endif %}">
-      <span class="card-category">{{ proj.category }}</span>
-      <h3>{{ proj.title }}</h3>
-      <p class="card-summary">{{ proj.summary }}</p>
-    </div>
-    {% endif %}{% endfor %}
-  </div>
-
-  <h3 class="sub-title">相关技能</h3>
-  <div class="skills-grid">
-    {% for group in skills %}{% if group.category == "公众号" %}
-    <div class="skill-group">
-      <h4>{{ group.category }}</h4>
-      <ul class="skill-list">
-        {% for item in group.items %}
-        <li class="skill-item">
-          <span class="skill-name">{{ item.name }}</span>
-          <span class="skill-level">{{ item.level }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}{% endfor %}
+  <div class="card placeholder-card">
+    <p class="placeholder-text">🚧 即将开启，敬请期待</p>
   </div>
 </section>
 
 {# === 小红书 === #}
 <section class="content-panel" id="panel-xiaohongshu" data-panel="xiaohongshu">
   <h2 class="panel-title">小红书</h2>
-
-  <div class="card-grid">
-    {% for svc in services %}{% if svc.id == "xiaohongshu" %}
-    <div class="card service-card">
-      <h3>{{ svc.title }}</h3>
-      <p class="card-summary">{{ svc.summary }}</p>
-      <ul class="highlight-list">
-        {% for item in svc.highlights %}<li>{{ item }}</li>{% endfor %}
-      </ul>
-    </div>
-    {% endif %}{% endfor %}
+  <div class="card placeholder-card">
+    <p class="placeholder-text">🚧 即将开启，敬请期待</p>
   </div>
+</section>
 
-  <h3 class="sub-title">相关项目</h3>
-  <div class="card-grid">
-    {% for proj in projects %}{% if proj.category == "小红书" %}
-    <div class="card project-card{% if proj.featured %} featured{% endif %}">
-      <span class="card-category">{{ proj.category }}</span>
-      <h3>{{ proj.title }}</h3>
-      <p class="card-summary">{{ proj.summary }}</p>
-    </div>
-    {% endif %}{% endfor %}
-  </div>
-
-  <h3 class="sub-title">相关技能</h3>
-  <div class="skills-grid">
-    {% for group in skills %}{% if group.category == "小红书" or group.category == "视频制作" %}
-    <div class="skill-group">
-      <h4>{{ group.category }}{% if group.note %} <small>{{ group.note }}</small>{% endif %}</h4>
-      <ul class="skill-list">
-        {% for item in group.items %}
-        <li class="skill-item">
-          <span class="skill-name">{{ item.name }}</span>
-          <span class="skill-level">{{ item.level }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}{% endfor %}
+{# === AI编程 === #}
+<section class="content-panel" id="panel-ai-coding" data-panel="ai-coding">
+  <h2 class="panel-title">AI编程</h2>
+  <div class="card placeholder-card">
+    <p class="placeholder-text">🚧 即将开启，敬请期待</p>
   </div>
 </section>
 

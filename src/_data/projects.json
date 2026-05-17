@@ -1,36 +1,57 @@
 [
   {
-    "title": "AI编程自动化工作流",
-    "category": "效率工具",
-    "summary": "利用AI编程能力构建自动化工作流，涵盖数据处理、文档生成、格式转换等场景，将重复性工作系统化，提升交付效率。",
+    "title": "知网文献检索自动化",
+    "category": "代写工具",
+    "summary": "输入选题自动拆解关键词，引导浏览器检索知网，提取标题/作者/摘要，输出GB格式引用+摘要的DOCX文档，半自动化文献检索流程。",
     "tags": ["writing", "academic", "tech"],
     "featured": true
   },
   {
-    "title": "知网文献检索自动化",
+    "title": "课题申请评审书生成",
     "category": "代写工具",
-    "summary": "输入选题自动生成关键词，浏览器自动检索知网文献，提取标题、作者、摘要，输出标准格式DOCX。",
+    "summary": "解析申报通知+评审书模板+参考资料，逐节生成概念界定、研究述评、研究内容、思路方法等完整模块，输出规范排版的DOCX正式稿。",
     "tags": ["writing", "academic", "tech"],
     "featured": true
+  },
+  {
+    "title": "图片/资料结构化提取",
+    "category": "代写工具",
+    "summary": "客户资料图片自动转Markdown结构化文本，智谱GLM-4V → DeepSeek Vision → Tesseract OCR三策略自动降级，支持中文标点规范。",
+    "tags": ["writing", "academic", "tech"],
+    "featured": true
+  },
+  {
+    "title": "答辩级图表生成",
+    "category": "代写工具",
+    "summary": "技术路线图、研究内容图、架构图自动生成，HTML/CSS像素级精确定位，输出竞赛/答辩级PNG/SVG/HTML，适配课题申报与毕业论文场景。",
+    "tags": ["writing", "academic", "tech"],
+    "featured": true
+  },
+  {
+    "title": "AI编程自动化工作流",
+    "category": "效率工具",
+    "summary": "以上工具均基于AI编程构建，形成完整的代写工作流：文献检索→资料提取→内容生成→图表制作→格式化交付，持续积累新Skill。",
+    "tags": ["writing", "academic", "tech"],
+    "featured": false
   },
   {
     "title": "公众号内容生产工具链",
     "category": "公众号",
-    "summary": "从选题分析、对标研究、初稿生成到排版发布的完整工作流，大幅提升内容产出效率。",
+    "summary": "从选题分析、对标研究、初稿生成到排版发布的完整工作流。",
     "tags": ["media", "content"],
-    "featured": true
+    "featured": false
   },
   {
     "title": "小红书笔记风格模板",
     "category": "小红书",
     "summary": "针对不同赛道的内容风格模板与选题库，支持快速产出符合平台调性的笔记文案。",
     "tags": ["media", "content"],
-    "featured": true
+    "featured": false
   },
   {
     "title": "视频内容制作",
     "category": "视频",
-    "summary": "短视频策划与AI辅助生成，目前处于学习成长阶段，持续提升中。",
+    "summary": "短视频策划与AI辅助生成，目前处于学习成长阶段。",
     "tags": ["media", "content"],
     "featured": false
   }
