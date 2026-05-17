@@ -1,0 +1,26 @@
+<section class="section contact">
+  <h2 class="section-title">联系我</h2>
+  <div class="contact-card">
+    <p class="contact-note">{{ site.privacy.contact_note }}</p>
+    <div class="contact-methods">
+      {% if site.social.wechat_mp %}
+      <div class="contact-item">
+        <span class="contact-label">公众号</span>
+        <span class="contact-value">{{ site.social.wechat_mp }}</span>
+      </div>
+      {% endif %}
+      {% if site.social.xiaohongshu %}
+      <div class="contact-item">
+        <span class="contact-label">小红书</span>
+        <span class="contact-value">{{ site.social.xiaohongshu }}</span>
+      </div>
+      {% endif %}
+      {% if site.social.douyin %}
+      <div class="contact-item">
+        <span class="contact-label">抖音</span>
+        <span class="contact-value">{{ site.social.douyin }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

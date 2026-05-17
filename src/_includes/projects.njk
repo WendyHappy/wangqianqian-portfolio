@@ -1,0 +1,16 @@
+<section class="section projects">
+  <h2 class="section-title">项目作品</h2>
+  <div class="card-grid">
+    {% for proj in projects %}
+    <div class="card project-card{% if proj.featured %} featured{% endif %}"
+         data-tags="{{ proj.tags | join(',') }}">
+      {% if proj.featured %}
+      <span class="featured-badge">精选</span>
+      {% endif %}
+      <span class="card-category">{{ proj.category }}</span>
+      <h3 class="card-title">{{ proj.title }}</h3>
+      <p class="card-summary">{{ proj.summary }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

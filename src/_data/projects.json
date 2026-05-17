@@ -1,0 +1,30 @@
+[
+  {
+    "title": "知网文献检索自动化工具",
+    "category": "工具开发",
+    "summary": "输入选题自动生成关键词，浏览器自动检索知网文献，提取标题、作者、摘要，输出GB/T 7714标准格式的DOCX文档。大幅提升文献整理效率。",
+    "tags": ["writing", "academic", "tech"],
+    "featured": true
+  },
+  {
+    "title": "个人知识库管理系统",
+    "category": "知识管理",
+    "summary": "基于Obsidian的个人知识库，通过AI实现自动分类、智能检索、知识图谱可视化。将碎片信息转化为结构化知识网络。",
+    "tags": ["tech", "content"],
+    "featured": true
+  },
+  {
+    "title": "内容生产效率工具链",
+    "category": "内容创作",
+    "summary": "从选题分析、对标研究、初稿生成到终稿打磨的完整内容生产流程。公众号文章+封面+短视频的全链路生产体系。",
+    "tags": ["media", "content", "writing"],
+    "featured": true
+  },
+  {
+    "title": "气象数据可视化分析",
+    "category": "数据分析",
+    "summary": "利用MATLAB和Origin对大气探测数据进行处理与可视化，包括温湿压垂直分布分析、湖陆风比对试验等。",
+    "tags": ["academic", "research", "tech"],
+    "featured": false
+  }
+]

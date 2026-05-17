@@ -1,0 +1,18 @@
+<section class="section skills">
+  <h2 class="section-title">技能栈</h2>
+  <div class="skills-grid">
+    {% for group in skills %}
+    <div class="skill-group" data-tags="{{ group.tags | join(',') }}">
+      <h3 class="skill-category">{{ group.category }}</h3>
+      <ul class="skill-list">
+        {% for item in group.items %}
+        <li class="skill-item">
+          <span class="skill-name">{{ item.name }}</span>
+          <span class="skill-level">{{ item.level }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>

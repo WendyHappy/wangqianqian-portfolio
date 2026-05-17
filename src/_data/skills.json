@@ -1,0 +1,31 @@
+[
+  {
+    "category": "内容创作",
+    "tags": ["writing", "media", "content"],
+    "items": [
+      { "name": "文案写作", "level": "精通" },
+      { "name": "公众号运营", "level": "熟练" },
+      { "name": "短视频制作", "level": "熟练" },
+      { "name": "选题与内容策划", "level": "熟练" }
+    ]
+  },
+  {
+    "category": "工具与自动化",
+    "tags": ["tech", "writing"],
+    "items": [
+      { "name": "浏览器自动化", "level": "熟练" },
+      { "name": "文献检索与管理", "level": "精通" },
+      { "name": "知识库管理", "level": "熟练" },
+      { "name": "多模型AI工具协同", "level": "熟练" }
+    ]
+  },
+  {
+    "category": "数据分析",
+    "tags": ["academic", "research", "tech"],
+    "items": [
+      { "name": "MATLAB", "level": "掌握" },
+      { "name": "Origin", "level": "掌握" },
+      { "name": "数据可视化", "level": "掌握" }
+    ]
+  }
+]

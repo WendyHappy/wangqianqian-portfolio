@@ -1,0 +1,11 @@
+<nav class="view-switcher" aria-label="内容视图切换">
+  {% for view in views %}
+  <button class="view-pill{% if loop.first %} active{% endif %}"
+          data-view="{{ view.id }}"
+          data-filters='{{ view.filter | dump | safe }}'
+          aria-pressed="{{ 'true' if loop.first else 'false' }}">
+    {{ view.label }}
+    <span class="view-hint">{{ view.description }}</span>
+  </button>
+  {% endfor %}
+</nav>

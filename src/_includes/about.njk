@@ -1,0 +1,38 @@
+<section class="section about" data-tags="all">
+  <h2 class="section-title">关于我</h2>
+
+  <p class="bio-text" data-tags="all,academic,research,media,content">{{ profile.bio }}</p>
+  <p class="bio-text persona-text" data-tags="writing">{{ profile.persona_writing.description }}</p>
+
+  <div class="info-grid">
+    <div class="info-card" data-tags="all,academic,research,media,content">
+      <h3>教育背景</h3>
+      <p class="info-main">{{ profile.education.school }}</p>
+      <p class="info-sub">{{ profile.education.major }}</p>
+      <p class="info-sub">{{ profile.education.degree }} · {{ profile.education.years }}</p>
+    </div>
+
+    <div class="info-card persona-card" data-tags="writing">
+      <h3>{{ profile.persona_writing.label }}</h3>
+      <p class="info-main">{{ profile.persona_writing.degree }}</p>
+    </div>
+
+    <div class="info-card" data-tags="all,academic,research,media,content">
+      <h3>证书</h3>
+      <ul class="cert-list">
+        {% for cert in profile.certificates %}
+        <li>{{ cert }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="info-card" data-tags="all">
+      <h3>兴趣爱好</h3>
+      <div class="hobby-tags">
+        {% for hobby in profile.hobbies %}
+        <span class="hobby-tag">{{ hobby }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

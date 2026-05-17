@@ -1,0 +1,9 @@
+<section class="hero">
+  <div class="hero-avatar" aria-hidden="true">{{ site.name | first }}</div>
+  <h1 class="hero-name">{{ site.name }}</h1>
+  {% if site.name_en %}
+  <p class="hero-name-en">{{ site.name_en }}</p>
+  {% endif %}
+  <p class="hero-tagline">{{ site.title }}</p>
+  <p class="hero-desc">{{ site.description }}</p>
+</section>

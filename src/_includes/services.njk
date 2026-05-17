@@ -1,0 +1,16 @@
+<section class="section services">
+  <h2 class="section-title">服务项目</h2>
+  <div class="card-grid">
+    {% for svc in services %}
+    <div class="card service-card" data-tags="{{ svc.tags | join(',') }}">
+      <h3 class="card-title">{{ svc.title }}</h3>
+      <p class="card-summary">{{ svc.summary }}</p>
+      <ul class="highlight-list">
+        {% for item in svc.highlights %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>

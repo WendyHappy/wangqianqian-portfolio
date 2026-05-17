@@ -1,0 +1,26 @@
+[
+  {
+    "id": "all",
+    "label": "完整档案",
+    "filter": [],
+    "description": "展示全部内容"
+  },
+  {
+    "id": "writing",
+    "label": "代写服务",
+    "filter": ["writing", "academic"],
+    "description": "面向代写客户，展示写作能力与学术素养"
+  },
+  {
+    "id": "media",
+    "label": "自媒体",
+    "filter": ["media", "content"],
+    "description": "面向内容合作，展示创作能力"
+  },
+  {
+    "id": "academic",
+    "label": "学术背景",
+    "filter": ["academic", "research", "tech"],
+    "description": "学术履历与技术能力"
+  }
+]
