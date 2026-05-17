@@ -110,8 +110,26 @@ layout: base.njk
 {# === AI编程 === #}
 <section class="content-panel" id="panel-ai-coding" data-panel="ai-coding">
   <h2 class="panel-title">AI编程</h2>
-  <div class="card placeholder-card">
-    <p class="placeholder-text">🚧 即将开启，敬请期待</p>
+
+  <div class="card-grid">
+    {% for proj in projects %}{% if proj.category == "AI编程" %}
+    <div class="card project-card{% if proj.featured %} featured{% endif %}">
+      <span class="card-category">{{ proj.category }}</span>
+      <h3>{{ proj.title }}</h3>
+      <p class="card-summary">{{ proj.summary }}</p>
+    </div>
+    {% endif %}{% endfor %}
+  </div>
+
+  <h3 class="sub-title">效率工具</h3>
+  <div class="card-grid">
+    {% for proj in projects %}{% if "writing" in proj.tags or "academic" in proj.tags %}
+    <div class="card project-card{% if proj.featured %} featured{% endif %}">
+      <span class="card-category">{{ proj.category }}</span>
+      <h3>{{ proj.title }}</h3>
+      <p class="card-summary">{{ proj.summary }}</p>
+    </div>
+    {% endif %}{% endfor %}
   </div>
 </section>
 

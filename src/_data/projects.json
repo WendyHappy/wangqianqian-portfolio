@@ -28,11 +28,18 @@
     "featured": true
   },
   {
-    "title": "AI编程自动化工作流",
+    "title": "代写全流程自动化",
     "category": "效率工具",
-    "summary": "以上工具均基于AI编程构建，形成完整的代写工作流：文献检索→资料提取→内容生成→图表制作→格式化交付，持续积累新Skill。",
+    "summary": "文献检索→资料提取→内容生成→图表制作→格式化交付，全链路AI驱动，持续积累新Skill，交付效率持续提升。",
     "tags": ["writing", "academic", "tech"],
     "featured": false
+  },
+  {
+    "title": "AI编程",
+    "category": "AI编程",
+    "summary": "基于Claude Code构建代写全流程自动化工具链，涵盖文献检索、资料解析、内容生成、图表制作、格式化输出等环节，Skill持续积累中。",
+    "tags": ["tech", "ai-coding"],
+    "featured": true
   },
   {
     "title": "公众号内容生产工具链",
