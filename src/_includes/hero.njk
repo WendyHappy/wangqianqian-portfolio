@@ -1,5 +1,8 @@
 <section class="hero">
-  <div class="hero-avatar" aria-hidden="true">{{ site.name | first }}</div>
+  <div class="hero-avatar" aria-hidden="true">
+    <img src="{{ '/images/avatar.jpeg' | url }}" alt="{{ site.name }}" class="avatar-img" onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+    <span class="avatar-fallback">{{ site.name | first }}</span>
+  </div>
   <h1 class="hero-name">{{ site.name }}</h1>
   {% if site.name_en %}
   <p class="hero-name-en">{{ site.name_en }}</p>
