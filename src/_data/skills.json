@@ -6,28 +6,28 @@
       { "name": "课题申报书撰写", "level": "精通" },
       { "name": "学术论文写作", "level": "精通" },
       { "name": "文献检索与综述", "level": "精通" },
-      { "name": "PPT逻辑与设计", "level": "熟练" },
-      { "name": "中英翻译与润色", "level": "熟练" },
-      { "name": "格式规范与排版", "level": "熟练" }
+      { "name": "PPT逻辑与设计", "level": "精通" },
+      { "name": "中英翻译与润色", "level": "精通" },
+      { "name": "格式规范与排版", "level": "精通" }
     ]
   },
   {
     "category": "公众号",
     "tags": ["media", "content"],
     "items": [
-      { "name": "选题策划", "level": "熟练" },
+      { "name": "选题策划", "level": "精通" },
       { "name": "文章撰写", "level": "精通" },
-      { "name": "封面设计", "level": "熟练" },
-      { "name": "排版美化", "level": "熟练" }
+      { "name": "封面设计", "level": "精通" },
+      { "name": "排版美化", "level": "精通" }
     ]
   },
   {
     "category": "小红书",
     "tags": ["media", "content"],
     "items": [
-      { "name": "笔记文案", "level": "熟练" },
-      { "name": "封面图制作", "level": "熟练" },
-      { "name": "关键词策略", "level": "掌握" }
+      { "name": "笔记文案", "level": "精通" },
+      { "name": "封面图制作", "level": "精通" },
+      { "name": "关键词策略", "level": "精通" }
     ]
   },
   {
