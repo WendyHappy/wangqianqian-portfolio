@@ -3,8 +3,11 @@
     "category": "代写服务",
     "tags": ["writing", "academic"],
     "items": [
-      { "name": "写作指导与润色", "level": "精通" },
-      { "name": "文献检索与管理", "level": "精通" },
+      { "name": "课题申报书撰写", "level": "精通" },
+      { "name": "学术论文写作", "level": "精通" },
+      { "name": "文献检索与综述", "level": "精通" },
+      { "name": "PPT逻辑与设计", "level": "熟练" },
+      { "name": "中英翻译与润色", "level": "熟练" },
       { "name": "格式规范与排版", "level": "熟练" }
     ]
   },

@@ -27,19 +27,42 @@ layout: base.njk
 <section class="content-panel" id="panel-writing" data-panel="writing">
   <h2 class="panel-title">代写服务</h2>
 
-  <div class="card-grid">
-    {% for svc in services %}{% if svc.id == "writing" %}
-    <div class="card service-card">
-      <h3>{{ svc.title }}</h3>
-      <p class="card-summary">{{ svc.summary }}</p>
-      <ul class="highlight-list">
-        {% for item in svc.highlights %}<li>{{ item }}</li>{% endfor %}
-      </ul>
+  {% for svc in services %}{% if svc.id == "writing" %}
+  <div class="card service-overview">
+    <h3>{{ svc.title }}</h3>
+    <p class="card-summary">{{ svc.summary }}</p>
+    <ul class="highlight-list">
+      {% for item in svc.highlights %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}{% endfor %}
+
+  <p class="section-intro">{{ manuscripts.intro }}</p>
+
+  <div class="stats-strip">
+    {% for stat in manuscripts.stats %}
+    <div class="stat-item">
+      <span class="stat-value">{{ stat.value }}</span>
+      <span class="stat-label">{{ stat.label }}</span>
     </div>
-    {% endif %}{% endfor %}
+    {% endfor %}
   </div>
 
-  <h3 class="sub-title">相关项目</h3>
+  <h3 class="sub-title">服务类别</h3>
+  <div class="card-grid">
+    {% for cat in manuscripts.categories %}
+    <div class="card category-card">
+      <span class="card-icon">{{ cat.icon }}</span>
+      <h4>{{ cat.name }}</h4>
+      <p class="card-summary">{{ cat.desc }}</p>
+      <div class="sample-tags">
+        {% for s in cat.samples %}<span class="sample-tag">{{ s }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h3 class="sub-title">效率工具</h3>
   <div class="card-grid">
     {% for proj in projects %}{% if "writing" in proj.tags or "academic" in proj.tags %}
     <div class="card project-card{% if proj.featured %} featured{% endif %}">
