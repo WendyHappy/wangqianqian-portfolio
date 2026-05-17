@@ -75,7 +75,7 @@ body{
 .nav-sub.active .nav-dot{background:#fff}
 
 /* ===== Main Content ===== */
-.main-content{margin-left:var(--sidebar-w);flex:1;padding:40px 36px 48px;max-width:calc(860px + 36px)}
+.main-content{margin-left:var(--sidebar-w);flex:1;padding:40px 48px 48px;max-width:1200px}
 
 .content-panel{display:none}
 .content-panel.active{display:block}
