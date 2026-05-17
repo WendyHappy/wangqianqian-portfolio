@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.name }}{% if site.name_en %} ({{ site.name_en }}){% endif %} — {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 <body>
-  <main>
-    {{ content | safe }}
-  </main>
-  <footer class="site-footer">
-    <p>&copy; {{ site.name }} · 保留所有权利</p>
-  </footer>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      {% include "sidebar.njk" %}
+    </aside>
+    <main class="main-content" id="mainContent">
+      {{ content | safe }}
+    </main>
+  </div>
   <script src="{{ '/js/view-switcher.js' | url }}"></script>
 </body>
 </html>

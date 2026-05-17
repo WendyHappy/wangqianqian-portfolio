@@ -1,70 +1,85 @@
 (function () {
   "use strict";
 
-  var pills = document.querySelectorAll(".view-pill");
-  var filterables = document.querySelectorAll("[data-tags]");
+  var navItems = document.querySelectorAll(".sidebar-nav [data-nav]");
+  var panels = document.querySelectorAll(".content-panel");
 
-  function getActiveView() {
-    var hash = window.location.hash.replace("#view=", "");
-    if (hash && document.querySelector('.view-pill[data-view="' + hash + '"]')) {
-      return hash;
+  // Map sub-items to parent. "writing", "wechat", "xiaohongshu" → "projects"
+  function resolveParent(navId) {
+    if (navId === "writing" || navId === "wechat" || navId === "xiaohongshu") {
+      return "projects";
     }
-    var stored = localStorage.getItem("portfolio-view");
-    if (stored && document.querySelector('.view-pill[data-view="' + stored + '"]')) {
-      return stored;
-    }
-    return "all";
+    return navId;
   }
 
-  function applyView(viewId) {
-    var selectedFilters = [];
-
-    pills.forEach(function (p) {
-      var active = p.dataset.view === viewId;
-      p.classList.toggle("active", active);
-      p.setAttribute("aria-pressed", active ? "true" : "false");
-
-      if (active && p.dataset.filters) {
-        try {
-          selectedFilters = JSON.parse(p.dataset.filters);
-        } catch (e) {}
+  function getInitialNav() {
+    var hash = window.location.hash.replace("#", "");
+    if (hash) {
+      for (var i = 0; i < navItems.length; i++) {
+        if (navItems[i].dataset.nav === hash) return hash;
       }
-    });
-
-    filterables.forEach(function (el) {
-      var tags = (el.dataset.tags || "").split(",").map(function (t) {
-        return t.trim();
-      });
-
-      if (viewId === "all") {
-        el.classList.remove("hidden");
-        return;
-      }
-
-      var visible = selectedFilters.some(function (f) {
-        return tags.indexOf(f) !== -1;
-      });
-
-      el.classList.toggle("hidden", !visible);
-    });
-
-    localStorage.setItem("portfolio-view", viewId);
-    if (viewId !== "all") {
-      history.replaceState(null, "", "#view=" + viewId);
-    } else {
-      history.replaceState(null, "", window.location.pathname);
     }
+    return "about";
+  }
+
+  function applyNav(navId) {
+    // Update nav active states
+    navItems.forEach(function (el) {
+      var isActive = el.dataset.nav === navId;
+      var isParent = resolveParent(el.dataset.nav) === resolveParent(navId) && el.dataset.nav === resolveParent(navId);
+
+      // Highlight parent when sub-item is active
+      if (el.dataset.nav === "projects" && resolveParent(navId) === "projects") {
+        el.classList.add("active-parent");
+      } else {
+        el.classList.remove("active-parent");
+      }
+
+      el.classList.toggle("active", isActive);
+    });
+
+    // Handle parent expand/collapse
+    var parentBtn = document.querySelector('.nav-parent[data-nav="projects"]');
+    if (parentBtn) {
+      var expanded = false;
+      if (navId === "writing" || navId === "wechat" || navId === "xiaohongshu") {
+        expanded = true;
+      }
+      parentBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+    }
+
+    // Show/hide panels
+    panels.forEach(function (p) {
+      p.classList.toggle("active", p.dataset.panel === navId);
+    });
+
+    // Update URL hash
+    history.replaceState(null, "", "#" + navId);
   }
 
   function init() {
-    var active = getActiveView();
-    applyView(active);
+    var initial = getInitialNav();
+    applyNav(initial);
 
-    pills.forEach(function (p) {
-      p.addEventListener("click", function () {
-        applyView(p.dataset.view);
+    navItems.forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        var navId = this.dataset.nav;
+        if (navId) applyNav(navId);
       });
     });
+
+    // Toggle project sub-menu
+    var parentBtn = document.querySelector('.nav-parent[data-nav="projects"]');
+    if (parentBtn) {
+      parentBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", String(!expanded));
+        var children = this.parentElement.querySelector(".nav-children");
+        if (children) children.classList.toggle("collapsed", expanded);
+      });
+    }
   }
 
   if (document.readyState === "loading") {
